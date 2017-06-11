@@ -46,7 +46,7 @@ Fourth element: "The product of 4 and 7 and 5 is 140."
 IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. To do addition, use your sum() function, and to do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
-// Write your code here
+// Write your code her
 //for the commit
 function sumAndMultiply(a,b,c){ //eslint-disable-line
   var sumTwo = sum(sum(a,b)[0], c)[0];
