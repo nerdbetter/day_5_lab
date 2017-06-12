@@ -73,8 +73,13 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-  var sumArrayTotal = sum(sum(testArray[0],testArray[1])[0], testArray[2])[0];
-  return [sumArrayTotal, testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sumArrayTotal + ' is their sum.'];
+  var calculatedSum = 0;
+  for(var i = 0; i < testArray.length; i++) {
+    var valueFromArray = testArray[i];
+    calculatedSum = sum(valueFromArray, calculatedSum)[0];
+  }
+  return [
+    calculatedSum, testArray + ' was passed in as an array of numbers, and ' + calculatedSum + ' is their sum.'];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -92,8 +97,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-  var multArrayTotal = multiply(multiply(testArray[0],testArray[1])[0], testArray[2])[0];
-  return [multArrayTotal, 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + multArrayTotal + '.'];
+  var calculatedProduct = 1;
+  for (var i = 0; i < testArray.length; i++) {
+    var valueFromArray = testArray[i];
+    calculatedProduct = multiply(valueFromArray, calculatedProduct)[0];
+  }
+  return [calculatedProduct, 'The numbers ' + testArray + ' have a product of ' + calculatedProduct + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
